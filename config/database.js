@@ -1,6 +1,6 @@
 const path = require('path');
 
 module.exports = {
-  url: 'mongodb://vitorha:Vh22652265@ds259732.mlab.com:59732/nodevhao',
+  url: process.env.DATABASE_URL,
   modelsPath: path.resolve('app', 'models'),
 };

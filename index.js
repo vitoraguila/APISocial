@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const app = require('express')();
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
@@ -18,4 +20,4 @@ app.use('/api', require('./app/routes'));
 
 app.use(Raven.errorHandler());
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT);
